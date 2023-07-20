@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.rentmyproperty.ui.fragments.MainFragment"
+        android:label="Main Fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_tenantsFragment"
+            app:destination="@id/tenantsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_OwnersFragment"
+            app:destination="@id/OwnersFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_PropertyFragment"
+            app:destination="@id/PropertyFragment" />
+        <action
+            android:id="@id/action_tenantsFragment_to_TenantReview"
+            app:destination="@+id/TenantReview" />
+        <action
+            android:id="@+id/action_mainFragment_to_PropertiesListFragment"
+            app:destination="@id/propertiesListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tenantsFragment"
+        android:name="com.example.rentmyproperty.ui.fragments.TenantsFragment"
+        android:label="Tenants Fragment">
+        <action
+            android:id="@+id/action_tenantsFragment_to_TenantReview"
+            app:destination="@id/TenantReview" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.rentmyproperty.ui.fragments.Camera"
+        android:label="Camera fragment" />
+    <fragment
+        android:id="@+id/OwnersFragment"
+        android:name="com.example.rentmyproperty.ui.fragments.OwnersFragment"
+        android:label="Owners Fragment" />
+
+    <fragment
+        android:id="@+id/PropertyFragment"
+        android:name="com.example.rentmyproperty.ui.fragments.PropertyFragment"
+        android:label="Property Fragment"
+        tools:layout="@layout/fragment_property" />
+    <fragment
+        android:id="@+id/propertiesListFragment"
+        android:name="com.example.rentmyproperty.ui.fragments.PropertiesListFragment"
+        android:label="Properties List Fragment"
+        tools:layout="@layout/fragment_properties_list">
+        <action
+            android:id="@+id/action_propertiesListFragment_to_PropertyDetailFragment"
+            app:destination="@id/propertyDetailFragment">
+            <argument
+                android:name="propertyId"
+                app:argType="long" />
+        </action>
+        <action
+            android:id="@+id/action_propertiesListFragment_to_TenantReview"
+            app:destination="@id/TenantReview" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/propertyDetailFragment"
+        android:name="com.example.rentmyproperty.ui.fragments.PropertyDetailsFragment"
+        android:label="Property detail Fragment" />
+    <fragment
+        android:id="@+id/TenantReview"
+        android:name="com.example.rentmyproperty.ui.fragments.TenantReview"
+        android:label="Tenant Review"
+        tools:layout="@layout/fragment_tenant_review">
+        <action
+            android:id="@+id/action_TenantReview_to_tenantsFragment"
+            app:destination="@id/tenantsFragment" />
+
+
+    </fragment>
+
+
+</navigation>

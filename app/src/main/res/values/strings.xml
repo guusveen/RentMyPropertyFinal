@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RentMyProperty</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="property_type_prompt">Select property type</string>
+    <string name="owners">Owners</string>
+    <string name="properties">Properties</string>
+    <string name="property_image">Property image</string>
+    <string name="tenants">Tenants</string>
+    <string name="take_picture" />
+    <string name="ok_button_title">Ok</string>
+    <string-array name="property_types">
+        <item>HOUSE</item>
+        <item>APARTMENT</item>
+        <item>ROOM</item>
+        <item>ALL</item>
+    </string-array>
+    
+</resources>
